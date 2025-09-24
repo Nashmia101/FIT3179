@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Malaysia Rainfall Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Vega libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 24px; }
+    #vis { max-width: 1000px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <h1>Average Daily Rainfall by State (Malaysia)</h1>
+  <div id="vis"></div>
+
+  <script>
+    // Render the Vega-Lite spec from map.vl.json (in the same folder)
+    vegaEmbed("#vis", "map.vl.json", {actions: false});
+  </script>
+</body>
+</html>
